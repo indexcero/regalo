@@ -1,0 +1,35 @@
+[gd_resource type="ArrayMesh" load_steps=3 format=4 uid="uid://dl7c55ju42u73"]
+
+[ext_resource type="Material" uid="uid://diocg2v23xasi" path="res://Assets/Plane.tres" id="1_h81ye"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xbds0"]
+_surfaces = [{
+"aabb": AABB(-1.6474218, 0.008203417, -1.5809673, 3.300701, 3.5757422, 2.9281306),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAEAAEAAwAFAAQAAgAGAAAAAgAHAAYABwAIAAYABwAJAAgA"),
+"name": "Plane",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 10,
+"vertex_data": PackedByteArray("2lTpApt/AADe8KJ3gnAAAO58AACJfwAAAADwY25wAAD//yv3AAAAAF0v//+EFQAAfymEPmy9AADbzu5EuKkAALFYH7j//wAAAZr04WzjAAA=")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "pasto_Plane"
+_surfaces = [{
+"aabb": AABB(-1.6474218, 0.008203417, -1.5809673, 3.300701, 3.5757422, 2.9281306),
+"attribute_data": PackedByteArray("jTj+//ecHapSaP7/AADPtQAAz7WghQhK95wdqnYfCEpgu4Ghz/vOXUTqFpYSl912Epfddi3KKQ3P+85dEpexDA=="),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0A"),
+"material": ExtResource("1_h81ye"),
+"name": "Plane",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("2lTpApt/tYTe8KJ3gnCuhO58AACJf6SFAADwY25wvIQAAPBjbnB9lf//K/cAAH2V3vCid4Jwf5VdL///hBV9le58AACJf7v/fymEPmy94v/aVOkCm3/M/dvO7kS4qVf/287uRLipX/ixWB+4//+x+H8phD5svez3AZr04WzjS/nX67GHCvbCh9/Hc4cf+nOWNvnHeub46nrf91x7TPpIevqoVg2TqNYMya1gE7Z1c9lub0jdvm2p2+txrd+8asPY")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_xbds0")

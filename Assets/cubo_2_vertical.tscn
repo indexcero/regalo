@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cttk1jhtavfck"]
+
+[ext_resource type="Script" uid="uid://cr6r8ottnt1ul" path="res://Assets/pieza.gd" id="1_44qim"]
+[ext_resource type="ArrayMesh" uid="uid://bjkmwvyjifgdw" path="res://Assets/cubo2vertical.obj" id="1_mnys1"]
+[ext_resource type="Material" uid="uid://d2blgfgkdraga" path="res://Assets/material.tres" id="2_44qim"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mnys1"]
+size = Vector3(1, 2, 1)
+
+[node name="cubo2vertical" type="RigidBody3D"]
+script = ExtResource("1_44qim")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = ExtResource("1_mnys1")
+surface_material_override/0 = ExtResource("2_44qim")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 4.83294, 0)
+shape = SubResource("BoxShape3D_mnys1")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

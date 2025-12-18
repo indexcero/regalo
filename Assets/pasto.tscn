@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bct5q8xu7bviq"]
+
+[ext_resource type="PackedScene" uid="uid://c3k2yuc7xd0qu" path="res://Assets/pasto.glb" id="1_5l2oh"]
+
+[node name="pasto" instance=ExtResource("1_5l2oh")]
+
+[node name="Plane" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33457804, -0.25414848, 0)
