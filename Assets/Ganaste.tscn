@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=3 uid="uid://6f2c74s0no0n"]
+
+[ext_resource type="Script" uid="uid://c100xi5avajy5" path="res://Assets/ganaste.gd" id="1_bnxps"]
+[ext_resource type="Texture2D" uid="uid://dc1ay3sxdev40" path="res://Assets/Screenshot (3814).png" id="2_bnxps"]
+
+[sub_resource type="Gradient" id="Gradient_bnxps"]
+colors = PackedColorArray(0, 0.28235295, 0, 1, 0, 0.28235295, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_qlyvj"]
+gradient = SubResource("Gradient_bnxps")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_r7xb2"]
+diffuse_texture = SubResource("GradientTexture1D_qlyvj")
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_bnxps")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bnxps")
+expand_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -89.0
+offset_right = 360.0
+offset_bottom = 89.0
+grow_vertical = 2
+texture = SubResource("CanvasTexture_r7xb2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = -81.0
+offset_right = 403.0
+offset_bottom = 136.0
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 57
+text = "¡Ganaste! 
+:D :D :D"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = 116.0
+offset_right = 356.0
+offset_bottom = 193.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Volver a jugar"
+
+[connection signal="button_down" from="Control/Button" to="." method="_on_button_button_down"]

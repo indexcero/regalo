@@ -69,8 +69,7 @@ func _physics_process(delta):
 	var colliding = $RayCast3D.is_colliding()
 	
 	if colliding and not was_colliding:
-		if ($RayCast3D.get_collider().name == "cubo2vertical"):
-			signals.emit_signal("raycast_hit", $RayCast3D.get_collider())
+		signals.emit_signal("raycast_hit", $RayCast3D.get_collider().get_instance_id())
 	
 	elif not colliding and was_colliding:
 		pass

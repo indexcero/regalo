@@ -1,0 +1,25 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cmjriwxrwjxun"]
+
+[ext_resource type="Shader" uid="uid://bv7iys2igsprs" path="res://Assets/shader_espacio.gdshader" id="1_dd46j"]
+[ext_resource type="Texture2D" uid="uid://cdshc34d46nls" path="res://Assets/Noise_1.tres" id="2_qwfks"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_dd46j")
+shader_parameter/albedo = Color(0.2414459, 0.6064347, 0.7980778, 1)
+shader_parameter/texture_albedo = ExtResource("2_qwfks")
+shader_parameter/albedo_texture_size = Vector2i(2000, 2000)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/emission = Color(0.15735883, 0.06344737, 0.31715304, 1)
+shader_parameter/emission_energy = 0.02999999932944
+shader_parameter/texture_normal = ExtResource("2_qwfks")
+shader_parameter/normal_scale = 1.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/albedo_scroll_speed = 0.01000023797500038

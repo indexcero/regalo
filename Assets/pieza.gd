@@ -11,22 +11,30 @@ var grab_point_local: Vector3
 var grab_target: Node3D
 var grab_distance := 0.0
 var camera: Camera3D
-
 var debug_sphere: MeshInstance3D
-
-
 var agarrable = false
-func _ready():
-	signals.raycast_hit.connect(_on_raycast_hit)
 
+
+var material = preload("res://Assets/material.tres")
+var outline = preload("res://Assets/material_outline.tres")
+
+
+
+func _ready():
+	
+	signals.raycast_hit.connect(_on_raycast_hit)
+		
 	
 func _on_timer_timeout() -> void:
+	var mesh := $MeshInstance3D
+	mesh.set_surface_override_material(0, material)
 	agarrable = false
 
 func _on_raycast_hit(mensaje):
-	if (mensaje.name=="cubo2vertical"): 
+	var mesh := $MeshInstance3D
+	if (mensaje == self.get_instance_id()): 
 		agarrable = true
-		print("Se agarro: ", mensaje.name)
+		mesh.set_surface_override_material(0, outline)
 		$Timer.start()
 
 

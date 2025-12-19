@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bu42qe8s187ye"]
+
+[ext_resource type="PackedScene" uid="uid://d3wwcdyfcob50" path="res://Assets/regalo_animado_5.glb" id="1_weqo3"]
+
+[node name="regalo" type="Node3D"]
+
+[node name="regalo_animado_5" parent="." instance=ExtResource("1_weqo3")]

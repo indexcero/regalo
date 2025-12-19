@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccln3bruwhynh"]
+
+[ext_resource type="FontFile" uid="uid://ceg35uoqfp4lg" path="res://Assets/Quicksand-Medium.ttf" id="1_deppi"]
+[ext_resource type="Script" uid="uid://bp2f3kto72e4e" path="res://Assets/ui.gd" id="1_smyel"]
+
+[sub_resource type="Theme" id="Theme_smyel"]
+default_font = ExtResource("1_deppi")
+default_font_size = 31
+
+[sub_resource type="Theme" id="Theme_6506y"]
+
+[node name="ui" type="CanvasLayer"]
+script = ExtResource("1_smyel")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1151.0
+offset_bottom = 647.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme = SubResource("Theme_smyel")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.003475239
+anchor_top = 0.00927357
+anchor_right = 0.11381408
+anchor_bottom = 0.00927357
+offset_right = 248.0
+offset_bottom = 40.0
+theme = SubResource("Theme_6506y")
+text = "Cubos mágicos reunidos:"
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+offset_left = 378.0
+offset_top = 7.0
+offset_right = 417.99997
+offset_bottom = 47.0
+text = "0
+"

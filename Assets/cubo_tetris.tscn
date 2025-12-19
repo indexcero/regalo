@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://3xocgat3cpm"]
+
+[ext_resource type="Script" uid="uid://cr6r8ottnt1ul" path="res://Assets/pieza.gd" id="1_agbaa"]
+[ext_resource type="ArrayMesh" uid="uid://brrjjxebajp7x" path="res://Assets/cubotetris.obj" id="2_gdovb"]
+[ext_resource type="Material" uid="uid://d2blgfgkdraga" path="res://Assets/material.tres" id="3_7nky7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mnys1"]
+size = Vector3(1, 1, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_agbaa"]
+size = Vector3(10, 20, 10)
+
+[node name="cubotetris" type="RigidBody3D"]
+script = ExtResource("1_agbaa")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = ExtResource("2_gdovb")
+surface_material_override/0 = ExtResource("3_7nky7")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0.01680851, -15.087146)
+shape = SubResource("BoxShape3D_mnys1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+shape = SubResource("BoxShape3D_agbaa")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

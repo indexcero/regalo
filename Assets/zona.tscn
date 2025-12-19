@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://di0cnsdoppaqc"]
+
+[ext_resource type="Material" uid="uid://cmjriwxrwjxun" path="res://Assets/zona.tres" id="1_mpghj"]
+[ext_resource type="Script" uid="uid://cnor0wpvhi8ai" path="res://Assets/zona.gd" id="3_jyb7a"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_82g1s"]
+radius = 7.0
+height = 14.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mpghj"]
+radius = 7.378
+
+[node name="Node3D" type="MeshInstance3D"]
+transform = Transform3D(0.998244, -0.059236757, 0, 0.059236757, 0.998244, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("SphereMesh_82g1s")
+surface_material_override/0 = ExtResource("1_mpghj")
+script = ExtResource("3_jyb7a")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_mpghj")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
